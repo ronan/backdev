@@ -1,0 +1,3 @@
+options:
+  root: /var/www/html
+  verbose: true

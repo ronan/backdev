@@ -1,0 +1,59 @@
+version: '3.3'
+services:
+  app:
+    stdin_open: true
+    tty: true
+    build:
+     context: ..
+     dockerfile: .devcontainer/Dockerfile
+    networks:
+      - backdrop
+    ports:
+      - 80:80
+      - 9000:9000
+    volumes:
+      - ${PWD}:/workspace
+
+      - ${PWD}/data/files:/var/www/html/files
+
+      - ${PWD}/src/sites:/var/www/html/sites
+      - ${PWD}/src/layouts:/var/www/html/layouts
+      - ${PWD}/src/modules:/var/www/html/modules
+      - ${PWD}/src/themes:/var/www/html/themes
+      - ${PWD}/src/profiles:/var/www/html/profiles
+
+      - ${PWD}/.devcontainer/settings.local.php:/var/www/html/settings.php
+
+    restart: always
+
+
+  db:
+    image: mariadb:latest
+    networks:
+      - backdrop
+    ports:
+      - 3306:3306
+    volumes:
+      - ${PWD}/data/mysql:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: backdrop
+      MYSQL_USER: user
+      MYSQL_PASSWORD: pass 
+
+
+  phpmyadmin:
+    networks:
+      - backdrop
+    ports:
+      - 8080:80
+    image: phpmyadmin:5
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+      PMA_USER: user
+      PMA_PASSWORD: pass
+
+
+networks:
+  backdrop:
+    driver: bridge

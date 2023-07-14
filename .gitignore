@@ -1,0 +1,6 @@
+data/files/*
+data/config/active/*
+data/config/staging/*
+data/mysql/*
+backdrop
+.DS_Store
