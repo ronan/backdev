@@ -1,6 +1,6 @@
 <?php
 # TODO: Figure out what exact PHP version and config Backdrop wants
-// error_reporting(E_ALL ^ E_DEPRECATED);
+error_reporting(E_ALL ^ E_DEPRECATED);
 
 $database = 'mysql://user:pass@db/backdrop';
 
@@ -17,5 +17,5 @@ $config_directories['staging'] = '/workspace/data/config/staging';
 // ini_set('session.cookie_lifetime', 2000000);
 
 // $settings['backdrop_drupal_compatibility'] = TRUE;
-// $settings['file_private_path'] = '/workspace/data/files/private';
-// $settings['file_public_path'] = '/workspace/data/files/public';
+$settings['file_private_path'] = '/workspace/data/files/private';
+$settings['file_public_path'] = '/workspace/data/files/public';
