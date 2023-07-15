@@ -39,7 +39,7 @@ https://code.visualstudio.com/docs/devcontainers/tutorial
 
 ### TODO
 
-- Configure debugging tools correctly and include debugging instructions
+- [In Progress] Configure debugging tools correctly and include debugging instructions
 - Add more Backdrop/Drupal-specific dev tooling, linting etc.
 - Automatic production data sync with PII masking
 - Auto-refreshing web previews for frontend development

@@ -15,7 +15,8 @@
 				"yzhang.markdown-all-in-one",
 				"xdebug.php-debug",
 				"DavidAnson.vscode-markdownlint",
-				"foxundermoon.shell-format"
+				"foxundermoon.shell-format",
+				"bmewburn.vscode-intelephense-client"
 			]
 		}
 	},
