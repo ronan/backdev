@@ -1,6 +1,6 @@
 {
 	"name": "Backdrop CMS",
-	"dockerComposeFile": "docker-compose.yml",
+	"dockerComposeFile": "../ops/local/docker-compose.yml",
 	"service": "app",
 	"workspaceFolder": "/workspace",
 	

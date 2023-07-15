@@ -1,0 +1,48 @@
+version: '3.3'
+services:
+  app:
+    stdin_open: true
+    tty: true
+    build:
+      context: ../../
+      dockerfile: ./ops/local/Dockerfile
+    links:
+      - db:mysql
+    ports:
+      - 80:80
+      - 9000:9000
+    volumes:
+      - ../../:/workspace
+      - ./settings.local.php:/var/www/html/settings.local.php
+      - ../../data/files:/var/www/html/files
+      # - ${PWD}/src/sites:/var/www/html/sites
+      # - ${PWD}/src/layouts:/var/www/html/layouts
+      # - ${PWD}/src/modules:/var/www/html/modules
+      # - ${PWD}/src/themes:/var/www/html/themes
+      # - ${PWD}/src/profiles:/var/www/html/profiles
+    restart: always
+
+  phpmyadmin:
+    ports:
+      - 8080:80
+    image: phpmyadmin:5
+    links:
+      - db:mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+      PMA_HOST: db
+      PMA_USER: root
+      PMA_PASSWORD: root
+
+  db:
+    image: mariadb:latest
+    ports:
+      - 3306:3306
+    volumes:
+      - ${PWD}/data/mysql:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: backdrop
+      MYSQL_USER: user
+      MYSQL_PASSWORD: pass 
+      MYSQL_ROOT_PASSWORD: root
+
