@@ -1,6 +1,4 @@
 <?php
-
-$version = readfile("/workspace/version.txt");
 echo <<<"EOD"
                   ___         ___         ___                     ___                 
      _____       /\  \       /\__\       /|  |       _____       /\__\        ___     
@@ -14,8 +12,7 @@ echo <<<"EOD"
     \::/  /     \:\__\      \::/  /     \:\__\      \::/  /     \::/  /    \::::/__/  
      \/__/       \/__/       \/__/       \/__/       \/__/       \/__/      ---      
 
-    Version $version
-
+     
 EOD;
 
 @unlink("/workspace/data/apache/httpd.pid");
