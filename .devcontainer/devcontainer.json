@@ -24,8 +24,6 @@
 			"extensions": [
 				"xdebug.php-debug",
 				"bmewburn.vscode-intelephense-client",
-				"yzhang.markdown-all-in-one",
-				"DavidAnson.vscode-markdownlint",
 				"streetsidesoftware.code-spell-checker",
 				"EditorConfig.EditorConfig"
 			]
