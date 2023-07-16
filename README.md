@@ -1,6 +1,6 @@
 # Backdev
 
-A devcontainer based local Backdrop CMS dev environment
+A [devcontainer](https://containers.dev) based local Backdrop CMS dev environment
 
 Some of the values of this project:
 
@@ -48,8 +48,6 @@ There are some defined VS Code tasks. Run "Tasks: Run Task" and choose from the 
 #### Reset Backdrop
 
 Drops and creates the `backdrop` database and deletes the active config file so that the installer can be run again.
-
-
 
 ### TODO
 
