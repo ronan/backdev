@@ -18,4 +18,7 @@ echo <<<"EOD"
 
 EOD;
 
+@unlink("/workspace/data/apache/httpd.pid");
+@symlink("/var/www/html", "/workspace/approot");
+
 exec("apache2 -f /workspace/ops/conf/apache2/httpd.conf -DFOREGROUND");

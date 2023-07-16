@@ -1,6 +1,3 @@
-ops/data/*
-data/files/*
-data/config/active/*
-data/config/staging/*
+data/*/*
 approot
 .DS_Store

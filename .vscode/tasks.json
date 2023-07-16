@@ -6,7 +6,7 @@
         {
             "label": "Reset Backdrop",
             "type": "shell",
-            "command": "php /workspace/ops/reset.php",
+            "command": "php /workspace/ops/bin/reset.php",
             "problemMatcher": [],
             "presentation": {
                 "reveal": "always",

@@ -10,7 +10,8 @@
 				"files.exclude": {
 					"**/.git": true,
 					".devcontainer": true,
-					".vscode": true
+					".vscode": true,
+					"ops": true,
 				},
 				"files.associations": {
 					"*.inc": "php"
@@ -19,7 +20,12 @@
 				"editorconfig.generateAuto": false,
 			},
 			"extensions": [
-				"mrmlnc.vscode-apache"
+				"xdebug.php-debug",
+				"bmewburn.vscode-intelephense-client",
+				"yzhang.markdown-all-in-one",
+				"DavidAnson.vscode-markdownlint",
+				"streetsidesoftware.code-spell-checker",
+				"EditorConfig.EditorConfig"
 			]
 		}
 	},
