@@ -1,6 +1,7 @@
-ops/data/*
+data/apache/*
+data/config/*
 data/files/*
-data/config/active/*
-data/config/staging/*
+data/mysql/*
+data/php/*
 approot
 .DS_Store

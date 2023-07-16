@@ -1,19 +1,22 @@
 {
-	"name": "Backdrop CMS",
+	"name": "BackDev",
 	"dockerComposeFile": "../ops/docker-compose.yml",
 	"service": "app",
 	"workspaceFolder": "/workspace",
 	"features": {
-		"ghcr.io/devcontainers/features/git:1": {},
+		"ghcr.io/devcontainers/features/git:1": {}
 	},
 	"customizations": {
 		"vscode": {
 			"settings": {
 				"files.exclude": {
 					"**/.git": true,
-					"ops": true,
 					".devcontainer": true,
-					".vscode": true
+					".vscode": true,
+					"ops": true,
+					"workbench.editorAssociations": {   
+						"*.md": "vscode.markdown.preview.editor",
+					}
 				},
 				"files.associations": {
 					"*.inc": "php"
@@ -24,8 +27,6 @@
 			"extensions": [
 				"xdebug.php-debug",
 				"bmewburn.vscode-intelephense-client",
-				"yzhang.markdown-all-in-one",
-				"DavidAnson.vscode-markdownlint",
 				"streetsidesoftware.code-spell-checker",
 				"EditorConfig.EditorConfig"
 			]

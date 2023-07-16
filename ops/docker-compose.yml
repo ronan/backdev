@@ -1,8 +1,6 @@
 version: '3.3'
 services:
   app:
-    stdin_open: true
-    tty: true
     build:
       context: ../
       dockerfile: ops/Dockerfile
@@ -13,9 +11,9 @@ services:
       - 9000:9000
     volumes:
       - ../:/workspace
-      - ./settings.local.php:/var/www/html/settings.local.php
-      - ./data/files:/var/www/html/files
-
+      - ./conf/settings.local.php:/var/www/html/settings.local.php
+      - ../data/files:/var/www/html/files
+  
   phpmyadmin:
     ports:
       - 8080:80
@@ -33,7 +31,7 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - ./data/mysql:/var/lib/mysql
+      - ../data/mysql:/var/lib/mysql
     environment:
       MYSQL_DATABASE: backdrop
       MYSQL_USER: user
