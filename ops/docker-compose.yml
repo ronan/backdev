@@ -4,23 +4,17 @@ services:
     stdin_open: true
     tty: true
     build:
-      context: ../../
-      dockerfile: ./ops/local/Dockerfile
+      context: ../
+      dockerfile: ops/Dockerfile
     links:
       - db:mysql
     ports:
       - 80:80
       - 9000:9000
     volumes:
-      - ../../:/workspace
+      - ../:/workspace
       - ./settings.local.php:/var/www/html/settings.local.php
-      - ../../data/files:/var/www/html/files
-      # - ${PWD}/src/sites:/var/www/html/sites
-      # - ${PWD}/src/layouts:/var/www/html/layouts
-      # - ${PWD}/src/modules:/var/www/html/modules
-      # - ${PWD}/src/themes:/var/www/html/themes
-      # - ${PWD}/src/profiles:/var/www/html/profiles
-    restart: always
+      - ./data/files:/var/www/html/files
 
   phpmyadmin:
     ports:
@@ -39,7 +33,7 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - ${PWD}/data/mysql:/var/lib/mysql
+      - ./data/mysql:/var/lib/mysql
     environment:
       MYSQL_DATABASE: backdrop
       MYSQL_USER: user

@@ -37,6 +37,20 @@ https://code.visualstudio.com/docs/devcontainers/tutorial
 
 5. Visit [http://localhost](http://localhost) in your browser.
 
+### Debugging
+
+Debugging works as it's supposed to. Just hit f5 and set some breakpoints.
+
+### Tasks
+
+There are some defined VS Code tasks. Run "Tasks: Run Task" and choose from the list.
+
+#### Reset Backdrop
+
+Drops and creates the `backdrop` database and deletes the active config file so that the installer can be run again.
+
+
+
 ### TODO
 
 - [In Progress] Configure debugging tools correctly and include debugging instructions

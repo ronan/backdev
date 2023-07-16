@@ -1,6 +1,6 @@
+ops/data/*
 data/files/*
 data/config/active/*
 data/config/staging/*
-data/mysql/*
-backdrop
+approot
 .DS_Store

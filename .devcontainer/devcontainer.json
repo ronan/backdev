@@ -1,6 +1,6 @@
 {
 	"name": "Backdrop CMS",
-	"dockerComposeFile": "../ops/local/docker-compose.yml",
+	"dockerComposeFile": "../ops/docker-compose.yml",
 	"service": "app",
 	"workspaceFolder": "/workspace",
 	
@@ -8,7 +8,18 @@
 
 	"customizations": {
 		"vscode": {
-			"settings": {},
+			"settings": {
+				"files.exclude": {
+					"**/.git": true,
+					"ops": true,
+					".devcontainer": true,
+					".vscode": true
+				},
+				"files.associations": {
+					"*.inc": "php"
+				},
+				"cSpell.enabled": true,		
+			},
 			"extensions": [
 				"streetsidesoftware.code-spell-checker",
 				"ms-azuretools.vscode-docker",
