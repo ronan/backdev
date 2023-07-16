@@ -3,15 +3,12 @@
 	"dockerComposeFile": "../ops/docker-compose.yml",
 	"service": "app",
 	"workspaceFolder": "/workspace",
-	"features": {
-		"ghcr.io/devcontainers/features/git:1": {},
-	},
+	"features": {},
 	"customizations": {
 		"vscode": {
 			"settings": {
 				"files.exclude": {
 					"**/.git": true,
-					"ops": true,
 					".devcontainer": true,
 					".vscode": true
 				},
@@ -22,12 +19,7 @@
 				"editorconfig.generateAuto": false,
 			},
 			"extensions": [
-				"xdebug.php-debug",
-				"bmewburn.vscode-intelephense-client",
-				"yzhang.markdown-all-in-one",
-				"DavidAnson.vscode-markdownlint",
-				"streetsidesoftware.code-spell-checker",
-				"EditorConfig.EditorConfig"
+				"mrmlnc.vscode-apache"
 			]
 		}
 	},

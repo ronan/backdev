@@ -1,6 +1,7 @@
 <?php
 
-echo <<<'EOD'
+$version = readfile("/workspace/version.txt");
+echo <<<"EOD"
                   ___         ___         ___                     ___                 
      _____       /\  \       /\__\       /|  |       _____       /\__\        ___     
     /::\  \     /::\  \     /:/  /      |:|  |      /::\  \     /:/ _/_      /\  \    
@@ -13,8 +14,8 @@ echo <<<'EOD'
     \::/  /     \:\__\      \::/  /     \:\__\      \::/  /     \::/  /    \::::/__/  
      \/__/       \/__/       \/__/       \/__/       \/__/       \/__/      ---      
 
-    Version 0
+    Version $version
 
 EOD;
-@symlink('/var/wwww/html', '/workspace/approot');
-exec("apache2-foreground");
+
+exec("apache2 -f /workspace/ops/conf/apache2/httpd.conf -DFOREGROUND");
