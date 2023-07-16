@@ -13,13 +13,8 @@ services:
       - 9000:9000
     volumes:
       - ../:/workspace
-      - ./settings.local.php:/var/www/html/settings.local.php
+      - ./conf/settings.local.php:/var/www/html/settings.local.php
       - ../data/files:/var/www/html/files
-      # - ../src/layouts:/var/www/html/layouts
-      # - ../src/modules:/var/www/html/modules
-      # - ../src/profiles:/var/www/html/layouts
-      # - ../src/sites:/var/www/html/layouts
-      # - ../src/themes:/var/www/html/layouts
   phpmyadmin:
     ports:
       - 8080:80
