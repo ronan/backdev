@@ -1,3 +1,7 @@
-data/*/*
+data/apache/*
+data/config/*
+data/files/*
+data/mysql/*
+data/php/*
 approot
 .DS_Store
