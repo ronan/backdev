@@ -11,7 +11,7 @@ services:
       - 9000:9000
     volumes:
       - ../:/workspace
-      - ./conf/settings.local.php:/var/www/html/settings.local.php
+      - ./config/settings.local.php:/var/www/html/settings.local.php
       - ../data/files:/var/www/html/files
   
   phpmyadmin:
@@ -37,4 +37,3 @@ services:
       MYSQL_USER: user
       MYSQL_PASSWORD: pass 
       MYSQL_ROOT_PASSWORD: root
-
