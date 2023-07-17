@@ -1,4 +1,4 @@
-# Backdev
+# BackDev
 
 A [devcontainer](https://containers.dev) based local Backdrop CMS dev environment
 
@@ -13,7 +13,7 @@ Some of the values of this project:
 
 ## Prerequisites
 
-This repository is designed to be used with Visual Studio Code and requires a container management and virtualization solution such as Docker Desktop
+This repository is designed to be used with Visual Studio Code and requires a container management and virtualization solution such as Docker Desktop.
 
 For more information on setting up your local environment see this tutorial:
 
@@ -21,7 +21,7 @@ https://code.visualstudio.com/docs/devcontainers/tutorial
 
 ## How to use
 
-1. Prepare your workstation by following [this tutorial](https://code.visualstudio.com/docs/devcontainers/tutorial)
+1. Prepare your workstation using [this tutorial](https://code.visualstudio.com/docs/devcontainers/tutorial)
 
 2. Clone this repository:
 
@@ -51,10 +51,11 @@ Drops and creates the `backdrop` database and deletes the active config file so 
 
 ### TODO
 
-- [In Progress] Configure debugging tools correctly and include debugging instructions
-- Add more Backdrop/Drupal-specific dev tooling, linting etc.
-- Automatic production data sync with PII masking
-- Auto-refreshing web previews for frontend development
+- Add more Backdrop/Drupal-specific dev tooling, linting, log viewers, sql tools etc.
+- Add opinionated container config for redis and solr.
+- [Github Codespaces](https://containers.dev/supporting#github-codespaces) support.
+- Automatic production data sync with PII masking.
+- Auto-refreshing web previews and builds for theme development.
 
 ### Note
 
