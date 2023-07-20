@@ -1,0 +1,10 @@
+name = BackDev
+description = Bootstrap a local dev environment from an existing Drupal 7 or Backdrop CMS site.
+version = BACKDROP_VERSION
+backdrop = 1.x
+type = profile
+hidden = TRUE
+
+dependencies[] = node
+dependencies[] = dblog
+dependencies[] = layout
